@@ -19,4 +19,14 @@ source repo: [https://github.com/ashiqulislam/CodeIgniter-3-blog](https://github
 
 ## Docker Installation
 - setup .env file variable
-- run `docker-compose up --build`
+- running aplication
+
+using php-fpm
+```
+dokcer-compose -f docker-compose-fpm.yml up --build
+```
+
+using php-apache
+```
+dokcer-compose -f docker-compose-fpm.yml up --build
+```

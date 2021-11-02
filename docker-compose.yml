@@ -1,0 +1,30 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+     - 80:80
+    depends_on:
+      - database
+    env_file:
+      - .env
+    networks:
+      - ci_app
+
+  database:
+    image: mysql:5.7
+    restart: unless-stopped
+    # init database
+    volumes:
+     - ./db.sql:/docker-entrypoint-initdb.d/db.sql
+    env_file:
+      - .env
+    networks:
+     - ci_app
+
+
+networks:
+  ci_app:
+    driver: bridge

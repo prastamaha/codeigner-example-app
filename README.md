@@ -28,5 +28,5 @@ dokcer-compose -f docker-compose-fpm.yml up --build
 
 using php-apache
 ```
-dokcer-compose -f docker-compose-fpm.yml up --build
+dokcer-compose -f docker-compose-apache.yml up --build
 ```

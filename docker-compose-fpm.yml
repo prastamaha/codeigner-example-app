@@ -16,7 +16,7 @@ services:
 
   app:
     build:
-      context: ./docker/php-fpm
+      context: .
       dockerfile: Dockerfile
     depends_on:
       - database

@@ -23,10 +23,10 @@ source repo: [https://github.com/ashiqulislam/CodeIgniter-3-blog](https://github
 
 using php-fpm
 ```
-dokcer-compose -f docker-compose-fpm.yml up --build
+docker-compose -f docker-compose-fpm.yml up --build
 ```
 
 using php-apache
 ```
-dokcer-compose -f docker-compose-apache.yml up --build
+docker-compose -f docker-compose-apache.yml up --build
 ```
